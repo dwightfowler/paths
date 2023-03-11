@@ -13,18 +13,18 @@ namespace Paths
         {
             ConsoleColor forecolor = Console.ForegroundColor;
             Regex setvar = new Regex("%[^%]+%");
-            string paths;
+            string? paths;
             try
             {
                 Console.ForegroundColor = forecolor;
                 Console.WriteLine("System Paths");
                 paths = Environment.GetEnvironmentVariable("PATH", EnvironmentVariableTarget.Machine);
-                printPaths(paths);
+                printPaths(paths ?? "Machine path not found");
 
                 Console.ForegroundColor = forecolor;
                 Console.WriteLine("User Paths");
                 paths = Environment.GetEnvironmentVariable("PATH", EnvironmentVariableTarget.User);
-                printPaths(paths);
+                printPaths(paths ?? "User path not found");
             }
             finally
             {
@@ -65,7 +65,7 @@ namespace Paths
                 }
 
                 string sVar = path.Substring(m.Index, m.Length);
-                string sVarVal = sVar.Trim('%');
+                string? sVarVal = sVar.Trim('%');
                 sVarVal = Environment.GetEnvironmentVariable(sVarVal);
                 bool varExists = !String.IsNullOrEmpty(sVarVal);
                 color = varExists ? ConsoleColor.DarkYellow : ConsoleColor.DarkRed;
