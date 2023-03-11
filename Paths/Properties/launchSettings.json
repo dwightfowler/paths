@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Paths": {
+      "commandName": "Project",
+      "sqlDebugging": true
+    }
+  }
+}

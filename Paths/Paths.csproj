@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>Paths</AssemblyName>
+    <Version>2.1.0</Version>
+    <Authors>Dwight Fowler</Authors>
+    <Company>Quantium LLC</Company>
+    <Description>CLI tools to show PATH environment variables</Description>
+    <Copyright>Copyright 2021 - Dwight Fowler. All rights reserved.</Copyright>
+    <PackageProjectUrl>https://github.com/dwighfowler/paths</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dwighfowler/paths</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageTags>Path, CLI, Environement Variable</PackageTags>
+    <PackageReleaseNotes>Added check for duplicate path entries and highlight those in yellow,
+Added sort feature</PackageReleaseNotes>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Paths.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyVersion>2.1.0.1</AssemblyVersion>
+    <FileVersion>1.1.0.1</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants></DefineConstants>
+    <ErrorReport>none</ErrorReport>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Utility.CommandLine.Arguments" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
