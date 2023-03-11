@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworkVersion>net5.0</TargetFrameworkVersion>
+    <RootNamespace>Paths</RootNamespace>
+    <AssemblyName>Paths</AssemblyName>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+  </ItemGroup>
+</Project>
